@@ -1,6 +1,6 @@
 <template>
-    <h2>Hello {{ name }}</h2>
-    <h2 v-text="name"></h2>
+    <h2>Hello <span v-html="name"></span></h2>
+    <div v-html="name"></div>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
     name: "App",
     data() {
         return {
-            name: "Bob",
+            name: "<b>Bob</b>",
         };
     },
 };
