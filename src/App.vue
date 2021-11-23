@@ -1,6 +1,6 @@
 <template>
-    <h2>Hello <span v-html="name"></span></h2>
-    <div v-html="name"></div>
+    <h2 v-bind:id="headingID">Heading</h2>
+    <button v-bind:disabled="isDisable">Bind</button>
 </template>
 
 <script>
@@ -8,7 +8,8 @@ export default {
     name: "App",
     data() {
         return {
-            name: "<b>Bob</b>",
+            headingID: "heading",
+            isDisable: true,
         };
     },
 };
